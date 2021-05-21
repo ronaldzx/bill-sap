@@ -1,0 +1,17 @@
+{
+	"contractCode": "String",
+	"clients": [
+		"String"
+	],
+	"paymentStatus": "String",
+	"billPeriodStart": "String",
+	"billPeriodEnd": "String",
+	"pagination":{
+		"pageNumber": 1,
+		"pageItems": 1
+	},
+	"order":{
+		"property": "String",
+		"sort": "String"
+	}
+}

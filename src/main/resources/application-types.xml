@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="billRequestSAP" format="json">
+      <types:shape format="weave" example="examples/bills-sap.json"><![CDATA[%dw 2.0
+
+type billRequestSAP = {|
+  contractCode: String, 
+  clients: Array<String>, 
+  paymentStatus: String, 
+  billPeriodStart: String, 
+  billPeriodEnd: String, 
+  pagination: {|
+    pageNumber: Number {"typeId": "int"}, 
+    pageItems: Number {"typeId": "int"}
+  |}, 
+  order: {|
+    property: String, 
+    sort: String
+  |}
+|} {"example": "{\\\"contractCode\\\":\\\"String\\\",\\\"clients\\\":[\\\"String\\\"],\\\"paymentStatus\\\":\\\"String\\\",\\\"billPeriodStart\\\":\\\"String\\\",\\\"billPeriodEnd\\\":\\\"String\\\",\\\"pagination\\\":{\\\"pageNumber\\\":1,\\\"pageItems\\\":1},\\\"order\\\":{\\\"property\\\":\\\"String\\\",\\\"sort\\\":\\\"String\\\"}}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#4f333e6f-4de9-49cb-9671-73409b4ce855"/>
+</types:mule>

@@ -1,0 +1,25 @@
+apiPath: "/finanzas-pclientes/bill-sap/api/v1/*"
+
+autodiscoveryID : "16870484"
+
+listenerAPI:
+  port: "8080"
+
+listenerHealth:
+
+  port: "8081"
+
+LOG_LEVEL: "ERROR"
+
+serviceBillsProtocol: "https"
+serviceBillsHost: "sapcx1ci.correospre.es"
+serviceBillsPort: "50001"
+
+dashboardPath: "/RESTAdapter/neo/billings/dashboard"
+falloPath: "/v3/9390fdd8-a965-4708-88fd-9be7b028dc98"
+
+mock:
+  postDashBoard : "https://run.mocky.io/v3/cc806542-16de-4b98-bbcb-3a010ff9516a"
+  error500DashBoard200: "https://run.mocky.io/v3/9de8c196-727d-47a1-ba79-bdea806e8674"
+  error500DashBoard: "https://run.mocky.io/v3/e5fa243c-4163-4a78-aca6-8d611e15562b"
+  error404DashBoard: "https://run.mocky.io/v3/5534dc53-c62d-4b59-9660-0b6f6cbec157"
